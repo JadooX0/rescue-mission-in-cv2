@@ -50,20 +50,19 @@ else:
 
     output_dir = 'masked'
 
-# 2. Create the directory if it doesn't already exist [cite: 91]
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
     print(f"Created directory: {output_dir}")
 
-# 3. Define the file names for storage
-# We will save the land mask, ocean mask, and the final color overlay [cite: 39]
+
 ocean_filename = os.path.join(output_dir, 'mask_ocean.png')
 land_filename = os.path.join(output_dir, 'mask_land.png')
 overlay_filename = os.path.join(output_dir, 'segmented_overlay.png')
 
-# 4. Save the images to the directory
+
 cv2.imwrite(ocean_filename, ocean_mask)
 cv2.imwrite(land_filename, land_mask)
 cv2.imwrite(overlay_filename, segmented_output)
+
 
 print(f"Successfully stored masks in: {output_dir}")
