@@ -2,8 +2,6 @@ import cv2
 import numpy as np
 import os
 
-
-
 path = r'C:\Users\scorp\OneDrive\cv based rescue mission\dataset\datasetimage1.jpeg'
 
 img = cv2.imread(path)
@@ -66,3 +64,4 @@ cv2.imwrite(overlay_filename, segmented_output)
 
 
 print(f"Successfully stored masks in: {output_dir}")
+
